@@ -15,6 +15,7 @@ class CreateTranslationsTable extends Migration
         Schema::create('translations', function (Blueprint $table) {
             $table->increments('id');
             $table->string('lang');
+            $table->string('body');
             $table->integer('page_id')->unsigned();
             $table->foreign('page_id')
                   ->references('id')->on('pages')

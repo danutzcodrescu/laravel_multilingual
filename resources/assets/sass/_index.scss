@@ -1,0 +1,231 @@
+.my-container {
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    &.center {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    &.centered {
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+    .buttons {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        > div {
+            width: 50%;
+            color: $blue;
+            border-radius: 7px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px 0;
+            cursor: pointer;
+        }
+    }
+    &.background-opacity {
+        @extend .background-slider;
+        padding: 0;
+        margin-top: 35px; 
+        background-image: url('/dist/images/1980-download.jpeg');
+        height: auto;
+        > div {
+            padding: 25px 20px;
+            width: 100%; 
+            background-color: $blue; 
+            opacity: 0.8; 
+            box-sizing: border-box;
+            > h4 {
+                color: white;
+                margin-bottom: 25px;
+                border-bottom: 1px solid #7e7e7e;
+            }
+        }
+    }
+}
+
+.my-col {
+    box-sizing: border-box;
+    text-align: center;
+    color: $gold;
+    font-size: 1.2em;
+}
+
+.my-col:last-of-type {
+    padding: 15px 22px;
+    border-radius: 7px;
+    background-color: $gold;
+    color: $blue;
+    margin-top: 25px;
+    &:hover {
+        background-color: red;
+        color: $gold;
+    }
+}
+
+
+.strip {
+    background-color: $blue;
+    box-sizing: border-box;
+    padding: 30px 0;
+    width: 100%;
+}
+
+
+.renovation {
+    height: 250px;
+}
+
+.about {
+    width:100%;
+    padding: 10px 0 15px;
+    &-pic {
+        text-align: center;
+        flex: 1 1;
+        margin: 12px 0 29px;
+    }
+    &-text {
+        flex: 1 1 100%;
+    }
+}
+
+.h3_under {
+   margin: 0 auto;
+   position: relative;
+   border-bottom: 1px solid $blue;
+   &:after{
+        content:'';
+        position: absolute;
+        width: 200px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        bottom: -2px;
+        border-bottom: 3px solid $gold;
+        z-index: 10;
+    }
+}
+
+.specialty {
+    padding-top: 30px;
+    box-sizig: border-box;
+    border: 4.5px solid $gold;
+    padding: 15px;
+    box-shadow: inset -4px -1px 41px 1px rgba(161,162,173,1);
+    margin-bottom: 30px;
+    > h4 {
+        margin-top: 25px;
+        color: $gold;
+    }
+    
+    > p {
+        margin: 18px 0 30px;
+        color: #d3d3d3;
+    }
+    
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .my-container {
+        width: 70%;
+        &.extend {
+           width: 100%;
+           flex-direction: row;
+           justify-content: space-between;
+        }
+        &.centered {
+            width: 100%;
+            justify-content: space-between;
+            padding: 35px 10%;
+            flex-direction: row;
+        }
+        
+        .skills-text {
+            width: 65%;
+        }
+        
+        .buttons {
+            flex-direction: column;
+            width: 30%;
+            border-right: 1px solid $blue;
+            padding-right: 25px;
+            box-sizig: border-box;
+            max-width: 200px;
+            > div {
+                width: 100%;
+            }
+        }
+    }
+    
+    .about {
+        &-pic {
+            margin-right: 50px;
+            flex: 1 1;
+            text-align: left;
+        }
+        
+        &-text {
+            flex: 2.5 2.5;
+            margin: 12px 0 29px;
+        }
+    }
+    
+    .strip {
+        background-color: $blue;
+        box-sizing: border-box;
+        padding: 30px 0;
+    }
+    
+   .specialty {
+        width: 45%;
+        margin-bottom: 0;
+    }
+    
+    .h3_under {
+        width: 60%;
+        max-width: 580px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .my-container {
+        width: 80%;
+        flex-direction: row;
+        &.center {
+            justify-content: space-between;
+            padding: 0;
+        }
+         &.extend {
+             width: 80%;
+             padding: 0;
+         }
+    }
+    
+    .my-col {
+        text-align: left;
+        max-width: 70%;
+    }
+    
+    .my-col:last-of-type {
+        padding: 20px 28px;
+        margin-top: 0;
+        font-size: 1.3em;
+        min-width: 140px;
+        max-width:150px;
+    }
+    
+    
+    .renovation {
+        height: 280px;
+    }
+}

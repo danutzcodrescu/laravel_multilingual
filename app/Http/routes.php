@@ -11,8 +11,26 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
+
+Route::group( [ 'prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'localize' ] ], function() {
+    
+    Route::get('/', function() {
+        if (Request::route()->getPrefix()) {
+            $home = \App\Page::where('name', "Home")->first()
+                ->translations()->where("lang", LaravelLocalization::getCurrentLocale())->first();
+            return view ('welcome', compact('home'));
+        }
+        return view('index');
+    });
+    
+    Route::get(LaravelLocalization::transRoute('routes.results'),function(){
+        $home = \App\Page::where('name', 'results')->first()
+            ->translations()->where("lang", LaravelLocalization::getCurrentLocale())->first();
+        return view ('welcome', compact('home'));
+    });
+   
 });
 
-Route::get('/{locale}', 'PagesController@homePage');
+    
+
+

@@ -1,0 +1,85 @@
+.welcome-container {
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: url('/dist/images/960-download.jpeg');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    font-family: "Romana","Helvetica Neue",Helvetica,Arial,sans-serif;
+    
+    .choice-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        li {
+           width: 50%;
+           max-width: 520px;
+           text-align:center;
+           background-color: $blue;
+           border-radius: 7px;
+           display: flex;
+           
+           a {
+               text-decoration: none;
+               color: $gold;
+               font-weight: bold;
+               flex: 1 1 0;
+               padding: 30px 50px;
+           }
+        }
+        
+        li:first-of-type {
+            margin-bottom: 35px;
+        }
+        
+        li:hover {
+            background-color: red;
+            box-shadow: 17px 19px 29px 2px rgba(97,95,97,1);
+        }
+        
+    }
+}
+
+
+
+
+@media only screen and (min-width : 768px) {
+    .welcome-container {
+        justify-content: center;
+        .choice-container {
+            flex-direction: row;
+            width: 80%;
+            li {
+                width: 45%;
+                a {
+                    font-size: 1.2em;
+                }
+            }
+            li:first-child {
+                margin-bottom: 0;
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width:960px) {
+    .welcome-container {
+        background-image: url('/dist/images/1200-download.jpeg');
+    }
+}
+
+@media only screen and (min-width:1200px) {
+    .welcome-container {
+        background-image: url('/dist/images/1980-download.jpeg');
+    }
+}
+
+@media only screen and (min-width:3000px) {
+    .welcome-container {
+        background-image: url('/dist/images/download.jpeg');
+    }
+}

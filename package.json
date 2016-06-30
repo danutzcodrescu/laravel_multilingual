@@ -5,8 +5,20 @@
     "dev": "gulp watch"
   },
   "devDependencies": {
+    "bootstrap-sass": "^3.0.0",
+    "browser-sync": "^2.13.0",
     "gulp": "^3.9.1",
-    "laravel-elixir": "^5.0.0",
-    "bootstrap-sass": "^3.0.0"
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect-php": "0.0.7",
+    "gulp-css-preprocessor": "0.0.2",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-image-resize": "^0.8.0",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^1.5.3",
+    "laravel-elixir": "^5.0.0"
   }
 }
