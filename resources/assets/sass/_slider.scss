@@ -37,7 +37,7 @@
     overflow: hidden;
 }
 
-.cycle-pager div { 
+.cycle-pager span { 
     font-family: helvetica;
     font-size: 3.2em; 
     width: 1em; 
@@ -48,11 +48,11 @@
     cursor: pointer; 
 }
 
-.cycle-pager div:last-child {
+.cycle-pager span:last-child {
     margin-right:0;
 }
 
-.cycle-pager div.cycle-pager-active { 
+.cycle-pager span.cycle-pager-active { 
     color: $gold;
 }
 .cycle-pager > * { 
@@ -130,6 +130,10 @@
         justify-content: space-around;
         > * {
             cursor: pointer;
+        }
+        
+        > *:hover {
+            color: red;
         }
         
     }

@@ -1,0 +1,80 @@
+footer {
+    div.my-container.centered {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    
+    div h4.h2 {
+        color: $gold;
+        text-align: center;
+        margin-top: 3px;
+    }
+    
+    >div div {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        
+        a {
+            color: white;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span {
+                margin-top: 18.5px;
+            }
+        }
+        
+        a:hover {
+            color: $gold;
+            text-decoration: none;
+        }
+    }
+    
+    div div:nth-of-type(2) {
+        display: flex;
+        color: white;
+        flex-direction:row;
+        justify-content:center;
+        margin: 30px auto 23px;
+        
+        span:nth-of-type(2) {
+            margin-left: 13.5px;
+            font-weight: bold;
+        }
+    }
+}
+
+@media screen and (min-width:768px) {
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        
+        div h4.h2 {
+            width: 100%;
+            text-align: left;
+        }
+        
+        > div {
+            display: flex;
+            align-items: flex-end;
+            
+            div {
+                width: 50%;
+                a {
+                    justify-content: flex-start;     
+                }
+            }
+            
+            div:nth-of-type(2) {
+                justify-content: flex-end;
+                align-items: flex-end;
+                margin: 0;
+            }
+            
+        }
+        
+    }
+    
+}

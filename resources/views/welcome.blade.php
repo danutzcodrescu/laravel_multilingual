@@ -139,7 +139,7 @@
           
       </div>
         <br /><br />
-        
+        @include('footer')
         <script src="/js/cycle.js"></script>
         <script type="text/javascript" src="/js/app.min.js"></script>
         <script id="__bs_script__">//<![CDATA[
