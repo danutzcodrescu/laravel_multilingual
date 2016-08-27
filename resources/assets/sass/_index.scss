@@ -113,6 +113,14 @@
     }
 }
 
+.partners-parent {
+    width: 100%;   
+}
+
+.h3_partners {
+    @extend .h3_under;
+}
+
 .specialty {
     padding-top: 30px;
     box-sizig: border-box;
@@ -133,6 +141,25 @@
     &:last-of-type {
         margin-bottom: 0;
     }
+}
+
+.partners {
+    display: flex;
+    margin-top: 15px;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+    > img {
+        border: 1px solid light-grey;
+        margin: 5px auto;
+        width: 50%;
+    }
+    
+    > img:hover {
+        border: 3.5px solid $gold;
+    }
+    
 }
 
 @media screen and (min-width:768px) {
@@ -195,6 +222,15 @@
         width: 60%;
         max-width: 580px;
     }
+    
+    .partners {
+        flex-direction: row;
+        justify-content: space-around;
+        
+        > img {
+            width: 30%;
+        } 
+    }
 }
 
 @media screen and (min-width:1200px) {
@@ -227,5 +263,10 @@
     
     .renovation {
         height: 280px;
+    }
+    
+    .partners img {
+        width: 14%;
+        max-width: 200px;
     }
 }

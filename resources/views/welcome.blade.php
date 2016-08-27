@@ -6,9 +6,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script> 
+       
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="/css/app.min.css" rel="stylesheet" type="text/css">
-
+       
     </head>
     <body>
         @include('menu', array('items' => Lang::get('routes'), 'lang' =>LaravelLocalization::getCurrentLocale()))
@@ -93,22 +95,53 @@
       <div class="my-container background-opacity">
         <div>
             <h4 class="h2 h3_under text-center">Our latest projects</h4>
-            <div class="project-images">
+            <div class="small-controls">
+                <div>
+                    <span id="prev_small">&#9664;</span>
+                    <span id="next_small">&#9654;</span>
+                </div>
+            </div>
+            <div class="project-images current" id="project-1">
                 <div class="background-slider"  style="background-image: url('/dist/images/1980-2.jpeg');"></div>
+                <div class="background-slider"  style="background-image: url('/dist/images/1980-3.jpeg');"></div> 
+                <div class="background-slider"  style="background-image: url('/dist/images/1980-dow3nload.jpeg');"></div>
+                <div class="background-slider"  style="background-image: url('/dist/images/1980-downloa2d.jpeg');"></div>
+            </div>
+            <div class="project-images right" id="project-2">
+                
                 <div class="background-slider"  style="background-image: url('/dist/images/1980-3.jpeg');"></div> 
                 <div class="background-slider"  style="background-image: url('/dist/images/1980-dow3nload.jpeg');"></div>
                 <div class="background-slider"  style="background-image: url('/dist/images/1980-downloa2d.jpeg');"></div>
                 <div class="background-slider"  style="background-image: url('/dist/images/1980-1download.jpeg');"></div>
             </div>
-        </div>
-        <div class="controls">
-             <span id="prev">&lt;</span>
-             <span id="next">&gt;</span>
+            <div class="project-images right" id="project-3">
+                
+                <div class="background-slider"  style="background-image: url('/dist/images/1980-dow3nload.jpeg');"></div>
+                <div class="background-slider"  style="background-image: url('/dist/images/1980-downloa2d.jpeg');"></div>
+                <div class="background-slider"  style="background-image: url('/dist/images/1980-1download.jpeg');"></div>
+                <div class="background-slider"  style="background-image: url('/dist/images/1980-2.jpeg');"></div>
+            </div>
         </div>
       </div>  
+      
+      <div class="my-container extend" style="margin-top: 35px">
+          <div class="partners-parent">
+              <h4 class="h2 h3_partners text-center">Partners</h4>
+          </div>
+          <div class="partners">
+              <img src="https://demo.proteusthemes.com/structurepress/wp-content/uploads/sites/28/2015/11/client_01.jpg" />
+              <img src="https://demo.proteusthemes.com/structurepress/wp-content/uploads/sites/28/2015/11/client_02.jpg" />
+              <img src="https://demo.proteusthemes.com/structurepress/wp-content/uploads/sites/28/2015/11/client_03.jpg" />
+              <img src="https://demo.proteusthemes.com/structurepress/wp-content/uploads/sites/28/2015/11/client_04.jpg" />
+              <img src="https://demo.proteusthemes.com/structurepress/wp-content/uploads/sites/28/2015/11/client_05.jpg" />
+              <img src="https://demo.proteusthemes.com/structurepress/wp-content/uploads/sites/28/2015/11/client_06.jpg" />
+          </div>
+          
+      </div>
         <br /><br />
-        <script src="/js/app.min.js"></script>
+        
         <script src="/js/cycle.js"></script>
+        <script type="text/javascript" src="/js/app.min.js"></script>
         <script id="__bs_script__">//<![CDATA[
     document.write("<script async src='http://laravel-manu-wildman2bad.c9users.io:8082/browser-sync/browser-sync-client.2.13.0.js'><\/script>".replace("HOST", location.hostname));
 //]]></script>
