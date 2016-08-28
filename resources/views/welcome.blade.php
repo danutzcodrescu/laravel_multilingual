@@ -143,7 +143,7 @@
         <script src="/js/cycle.js"></script>
         <script type="text/javascript" src="/js/app.min.js"></script>
         <script id="__bs_script__">//<![CDATA[
-    document.write("<script async src='http://laravel-manu-wildman2bad.c9users.io:8082/browser-sync/browser-sync-client.2.13.0.js'><\/script>".replace("HOST", location.hostname));
+    document.write("<script async src='https://laravel-manu-wildman2bad.c9users.io:8082/browser-sync/browser-sync-client.2.13.0.js'><\/script>".replace("HOST", location.hostname));
 //]]></script>
     </body>
 </html>

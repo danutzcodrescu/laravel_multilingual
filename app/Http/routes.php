@@ -16,14 +16,14 @@ Route::group( [ 'prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 
     
     Route::get('/', function() {
         if (Request::route()->getPrefix()) {
-            $home = \App\Page::where('name', "Home")->first()
+            $home = \App\Page::where('name', "home")->first()
                 ->translations()->where("lang", LaravelLocalization::getCurrentLocale())->first();
             return view ('welcome', compact('home'));
         }
         return view('index');
     });
     
-    Route::get(LaravelLocalization::transRoute('routes.results'),function(){
+    Route::get(LaravelLocalization::transRoute('routes.results'),function(){ 
         $home = \App\Page::where('name', 'results')->first()
             ->translations()->where("lang", LaravelLocalization::getCurrentLocale())->first();
         return view ('welcome', compact('home'));

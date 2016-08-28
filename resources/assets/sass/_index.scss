@@ -32,10 +32,10 @@
     }
     &.background-opacity {
         @extend .background-slider;
+        height: auto;
         padding: 0;
         margin-top: 35px; 
         background-image: url('/dist/images/1980-download.jpeg');
-        height: auto;
         > div {
             padding: 25px 20px;
             width: 100%; 
