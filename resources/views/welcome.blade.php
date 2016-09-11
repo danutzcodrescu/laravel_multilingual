@@ -33,9 +33,9 @@
                <div class="my-col">
                    Looking for a quality and affordable constructor for your next project?
                </div>
-               <a class="my-col" href="{{route('main-contact')}}">
+               <div class="my-col" href="{{route('main-contact')}}">
                    Get quote
-               </a>
+               </div>
            </div>
        </div>
        <div class="my-container extend" style="margin-top: 30px">
