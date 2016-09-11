@@ -55,3 +55,8 @@ $("#prev_small").click(function() {
         }
     }
 });
+
+$('.thumbnails').on('click', '> *', function(e) {
+    var id = e.target.id;
+    $(".background-slider.project-image").css("background-image", "url('"+e.target.src+"')")
+});

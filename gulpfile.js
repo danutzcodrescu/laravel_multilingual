@@ -75,11 +75,7 @@ gulp.task('resizeImage', function() {
 
 
 gulp.task('default', ['css', 'js', 'browserSync'], function() {
-	gulp.watch('./resources/assets/sass/*.scss', function() {
-	    gulp.run('css');
-	});
-	gulp.watch('./resources/assets/js/*.js', function() {
-	    gulp.run('js');
-	});
+	gulp.watch('./resources/assets/sass/*.scss', ['css']);
+	gulp.watch('./resources/assets/js/*.js', ['js']);
 	gulp.watch('./resources/views/*.php').on('change', browserSync.reload);
 });

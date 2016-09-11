@@ -1,0 +1,188 @@
+.my-container.grouped-form {
+    margin-bottom: 40px;
+}
+
+.my-container form {
+    div {
+        display: flex;
+        flex-direction: column;
+        
+        input, textarea {
+            display: flex;
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            border: 2px solid $blue;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            background-color: $gold;
+            color: $blue;
+            
+            &:focus {
+                border-radius: 5px;
+                border: 2px solid red;
+                outline: none;
+            }
+        }
+        
+        p {
+            margin-bottom: 10px;
+            color: $blue;
+            font-style: italic;
+            font-size: 18px;
+            padding-left: 2px;
+        }
+        
+        input[type="submit"] {
+            max-width: 160px;
+            font-weight: bold;
+            border: 0;
+            padding: 15px;
+            
+            &:hover {
+                background-color: red;
+                color: $gold;
+            }
+        }
+        
+        ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+            color: $blue;
+        }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+           color:  $blue;
+           opacity:  1;
+        }
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+           color:  $blue;
+           opacity:  1;
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+           color:  $blue;
+        }
+    }
+}
+
+.my-container .contact-box {
+    @extend .menu-container;
+    padding-left: 1.5px;
+    padding-right: 1.5px;
+    
+    h4 {
+        color: $blue;
+        padding: 15px 0;
+        border-bottom: 1px solid $blue;
+        position: relative;
+        
+        &:after {
+            content: '';
+            border-bottom: 4px solid $gold;
+            width: 100px;
+            position: absolute;
+            left: 0;
+            padding: 15px 0;
+            bottom: -2px;
+            z-index: 9999;
+        }
+    }
+    > a {
+       color: $blue;  
+       border: 0;
+       span:first-of-type {
+           margin-right: 10px;
+       }
+    }
+}
+            
+
+@media screen and (min-width: 520px) {
+    .my-container form {
+        div {
+            width: 80%;
+            margin: 0 auto;
+            
+            &:last-of-type {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin: 10px auto 18px;
+            }    
+        }
+    }
+    
+}
+
+@media screen and (min-width: 580px) {
+    .my-container form {
+        div {    
+            width: 70%;
+            margin: 0 auto;
+        }
+    }
+    
+}
+
+@media screen and (min-width: 768px) {
+    .my-container.grouped-form {
+        width:90%;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0;
+        > * {
+                width: 49%;
+        };
+        
+        .contact-box {
+            align-items: flex-start;
+            
+            a {
+                padding: 0;
+                span:first-of-type {
+                    margin-right: 10px;
+                }
+            }
+        }
+        
+        .contact-box > * {
+            flex: 0 1 auto;
+        }
+    }
+    .my-container form {
+        margin-top: 60px;
+        div {
+            width: 100%;
+            margin: 0 auto;
+            flex-direction: row;
+            justify-content:space-between;
+            
+            input {
+                width:calc(50% - 5px);
+            }
+            
+            textarea {
+                width: 100%;
+            }
+            
+            p {
+                margin-right: 10px;
+            }
+        }
+    }
+    
+    .my-container .contact-box {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .my-container.grouped-form .contact-box {
+        
+        h4 {
+            margin-top: 0;
+            padding-top: 0;
+        }
+    }
+    
+    .my-container form {
+        padding-top: 0px;
+    }
+}

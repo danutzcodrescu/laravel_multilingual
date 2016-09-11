@@ -12,22 +12,39 @@
 */
 
 
-Route::group( [ 'prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'localize' ] ], function() {
+Route::group( [ 'prefix' => LaravelLocalization::setLocale(), 'middleware' => [ 'localize' ], 'as' => 'main-' ], function() {
     
-    Route::get('/', function() {
+    Route::get('/', ['as'=>'home', function() {
         if (Request::route()->getPrefix()) {
             $home = \App\Page::where('name', "home")->first()
                 ->translations()->where("lang", LaravelLocalization::getCurrentLocale())->first();
             return view ('welcome', compact('home'));
         }
         return view('index');
+    }]);
+    
+    Route::group( [ 'prefix' => LaravelLocalization::transRoute('routes.results'), 'as'=>'projects-' ], function() {
+        Route::get('/', ['as' => 'home',function() {
+            $projects = \App\Page::where('name', 'results')->first()
+                ->translations()->where("lang", LaravelLocalization::getCurrentLocale())->first();
+            return view ('projects', compact('projects'));
+        }]);
+        Route::get('{id}', ['as'=>'detailed', function($id) {
+            return view('detailed-proj');
+        }]);
     });
     
-    Route::get(LaravelLocalization::transRoute('routes.results'),function(){ 
-        $home = \App\Page::where('name', 'results')->first()
+    // Route::get(LaravelLocalization::transRoute('routes.results'),function(){ 
+    //     $projects = \App\Page::where('name', 'results')->first()
+    //         ->translations()->where("lang", LaravelLocalization::getCurrentLocale())->first();
+    //     return view ('projects', compact('projects'));
+    // });
+    
+     Route::get(LaravelLocalization::transRoute('routes.contact'), ['as' => 'contact', function(){ 
+        $contact = \App\Page::where('name', 'contact')->first()
             ->translations()->where("lang", LaravelLocalization::getCurrentLocale())->first();
-        return view ('welcome', compact('home'));
-    });
+        return view ('contact', compact('contact'));
+    }]);
    
 });
 

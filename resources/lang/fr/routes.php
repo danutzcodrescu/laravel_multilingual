@@ -2,5 +2,6 @@
 
 return array(
     'home' => 'accueuil',
-    'results' => 'notre-projects'
+    'results' => 'notre-projects',
+    'contact' => 'contactez-nous'
 );
