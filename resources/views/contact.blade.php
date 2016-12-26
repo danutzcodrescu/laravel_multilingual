@@ -52,7 +52,7 @@
                 </div>
                 <div>
                     <p>All fields with * are obligatory</p>
-                    {!! Form::submit('Send Message!') !!}
+                    <button type="submit">Send Message!</button>
                 </div>
             {!! Form::close() !!}      
         </div>

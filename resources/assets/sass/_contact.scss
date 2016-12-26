@@ -33,11 +33,16 @@
             padding-left: 2px;
         }
         
-        input[type="submit"] {
+        button[type="submit"] {
             max-width: 160px;
             font-weight: bold;
             border: 0;
             padding: 15px;
+            font-size: 18px;
+            border: 2px solid $blue;
+            border-radius: 5px;
+            background-color: $gold;
+            color: $blue;
             
             &:hover {
                 background-color: red;
