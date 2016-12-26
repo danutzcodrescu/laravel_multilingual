@@ -11,13 +11,16 @@
             <button type="submit">Salveaza modificarile!</button>
         </div>
 {!! Form::close() !!}   
-  
+
+
 <script src="//cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
 <script>
     // Replace the <textarea id="editor1"> with a CKEditor
     // instance, using default configuration.
     CKEDITOR.replace( 'fr');
     CKEDITOR.replace( 'eng');
+    CKEDITOR.config.contentsCss = '/css/app.min.css';
+    CKEDITOR.config.allowedContent = true;
 </script>
 
 @include('admin.footer')
